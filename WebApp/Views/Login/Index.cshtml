@@ -1,0 +1,52 @@
+﻿@model CodeTracker.Models.User.EndUser
+@{
+    Layout = null;
+}
+
+<style>
+    .m-1per {
+        margin: auto 0;
+    }
+
+    .bdr-1px-solid-black {
+        border: 1px solid black;
+    }
+
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full height */
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="bdr-1px-solid-black" background-color: lightgrey;">
+    <div class="m-1per">
+        <div class="center-container form-group">
+            <table>
+                <tr style="margin: 10px">
+                    <td style="font-size:50px; font-weight:bold; text-align:center;">
+                        Login
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBoxFor(model => model.EndUserUsername, new { @class="form-control", @placeholder = "Enter username"})
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBoxFor(model => model.EndUserPassword, new { @class = "form-control", @placeholder = "Enter password" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Login</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
