@@ -212,6 +212,10 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodeTracker.Business\CodeTracker.Business.csproj">
+      <Project>{2f13bd6c-ec93-4d9f-9ff9-661d1a1ded81}</Project>
+      <Name>CodeTracker.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CodeTracker.Models\CodeTracker.Models.csproj">
       <Project>{0f08f865-887b-4f20-8426-3d1c9b008166}</Project>
       <Name>CodeTracker.Models</Name>
