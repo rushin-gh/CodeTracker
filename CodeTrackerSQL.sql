@@ -36,7 +36,9 @@
 --	and UserPassword = @password
 --end
 
---exec GetUser 'rushi-dev', 'pass'
+--exec GetUser 'rushi-dev', 'dev'
 
 --update CTUser set UserPassword = 'dev' where UserId = 1;
+
+
 
