@@ -1,15 +1,16 @@
-﻿using CodeTracker.Models.User;
-using CodeTracker.Config;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
+using CodeTracker.Config;
+using CodeTracker.Models.User;
 
 namespace CodeTracker.Workflow
 {
     public static class UserRetrieval
     {
-        public static EndUser GetUserFromDB(EndUser endUser)
+        public static int GetUserIdFromDB(EndUser endUser)
         {
-            int userId = -1;
+            int userId = 0;
+
             string connectionString = Database.ConnectionString;
             using (var sqlConnection = new SqlConnection(connectionString))
             {
@@ -28,8 +29,8 @@ namespace CodeTracker.Workflow
                 }
                 sqlConnection.Close();
             }
-            endUser.EndUserUserid = userId;
-            return endUser;
+
+            return userId;
         }
     }
 }

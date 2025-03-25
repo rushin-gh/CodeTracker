@@ -220,6 +220,10 @@
       <Project>{0f08f865-887b-4f20-8426-3d1c9b008166}</Project>
       <Name>CodeTracker.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CodeTracker.Util\CodeTracker.Util.csproj">
+      <Project>{728bcbdf-b29f-4abe-84c0-35f79584684e}</Project>
+      <Name>CodeTracker.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

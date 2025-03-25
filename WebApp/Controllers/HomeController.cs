@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using CodeTracker.Util;
+using CodeTracker.Models.User;
 
 namespace WebApp.Controllers
 {
@@ -10,6 +8,11 @@ namespace WebApp.Controllers
     {
         public ActionResult Index()
         {
+            EndUser endUser = Session["EndUser"] as EndUser;
+            if (General.IsNull(endUser))
+            {
+                return RedirectToAction("Index", "Login");
+            }
             return View();
         }
 
